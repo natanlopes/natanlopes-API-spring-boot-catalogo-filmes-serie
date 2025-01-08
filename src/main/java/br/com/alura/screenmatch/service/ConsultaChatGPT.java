@@ -11,7 +11,7 @@ public class ConsultaChatGPT {
 
 	public static String obterTraducao(String texto) throws Exception {
 	    String url = "https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-en-ROMANCE";
-	    String token = "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"; // Token correto
+	    String token = "aqui"; // Token correto
 
 	    String body = "{ \"inputs\": \"" + texto + "\" }";
 
