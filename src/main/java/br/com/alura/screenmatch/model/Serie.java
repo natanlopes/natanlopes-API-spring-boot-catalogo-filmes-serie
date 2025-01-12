@@ -19,6 +19,12 @@ import jakarta.persistence.Transient;
 @Entity
 @Table(name = "series")
 public class Serie {
+	public void setEpisodios(List<Episodio> episodios) {
+		this.episodios = episodios;
+	}
+
+
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; 
