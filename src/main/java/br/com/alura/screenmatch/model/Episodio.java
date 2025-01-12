@@ -22,6 +22,9 @@ public class Episodio {
     private LocalDate dataLancamento;
     @ManyToOne
     private Serie serie;
+    public Episodio(){
+    	
+    }
     public Episodio(Integer numeroTemporada, DadosEpisodio dadosEpisodio) {
         this.temporada = numeroTemporada;
         this.titulo = dadosEpisodio.titulo();
