@@ -45,6 +45,7 @@ public class Principal {
                 3 - Listar séries buscadas
                 4 - Buscar série por título
                 5 - Buscar séries por ator
+                6 - Top 5 Séries
                 0 - Sair                                 
                 """;
 
@@ -68,6 +69,9 @@ public class Principal {
             case 5:
                 buscarSeriesPorAtor();
                 break;
+            case 6:
+            	buscarTop5Series();
+                break;
 
             case 0:
                 System.out.println("Saindo...");
@@ -78,7 +82,17 @@ public class Principal {
     	}
     }
 
-    private void buscarSeriesPorAtor() {
+	// código omitido
+
+	private void buscarTop5Series() {
+	        List<Serie> serieTop = repositorio.findTop5ByOrderByAvaliacaoDesc();
+	        serieTop.forEach(s ->
+	                        System.out.println(s.getTitulo() + " avaliação: " + s.getAvaliacao()));
+	}
+
+	// código omitido
+
+	private void buscarSeriesPorAtor() {
 		// TODO Auto-generated method stub
     	System.out.println("Qual o nome para busca?");
         var nomeAtor = leitura.nextLine();
